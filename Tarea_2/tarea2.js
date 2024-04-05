@@ -7,7 +7,6 @@ function calcularDescuento(monto) {
     }else{
         return monto * 0.20
     }
-    
 }
 
 var monto = parseFloat(prompt("Ingrese el monto: "))

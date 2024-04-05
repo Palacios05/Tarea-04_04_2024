@@ -1,20 +1,19 @@
-var asistencia, calificacion
+function verificarAprobacion(calificacion, asistencias, totalClases) {
 
-function verificarAprobacion (asistencia, calificacion) {
-
-    var porcentajeAsistencias = (asistencia / 100) * 80
-
-    if(calificacion >= 3 && asistencia >= porcentajeAsistencias){
-        return "Aprobado"
-    }else{
-        return "Reprobado"
+    var porcentajeAsistencias = (asistencias / totalClases) * 100;
+    if (porcentajeAsistencias >= 80) {
+        if (calificacion >= 3) {
+            console.log("¡Felicidades! Estás aprobado.");
+        } else {
+            console.log("Lo siento, estás reprobado debido a tu calificación.");
+        }
+    } else {
+        console.log("Lo siento, estás reprobado debido a tus asistencias.");
     }
-
 }
 
-var calificacion = parseFloat(prompt("Ingrese la calificacion del alumno: "))
-var asistencia = parseFloat(prompt("Ingrese el porcentaje de asistencia del alumno: "))
+var calificacionAlumno = parseFloat(prompt("Ingresa la calificación del alumno: "));
+var asistenciasAlumno = parseInt(prompt("Ingresa el número de asistencias del alumno: "));
+var totalClases = parseInt(prompt("Ingresa el número total de clases: "));
 
-var resultado = verificarAprobacion(asistencia, calificacion)
-
-alert("El estudiante esta " + resultado)
+verificarAprobacion(calificacionAlumno, asistenciasAlumno, totalClases);
