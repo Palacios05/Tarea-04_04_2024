@@ -1,14 +1,15 @@
 function verificarAprobacion(calificacion, asistencias, totalClases) {
 
     var porcentajeAsistencias = (asistencias / totalClases) * 100;
+
     if (porcentajeAsistencias >= 80) {
         if (calificacion >= 3) {
-            console.log("¡Felicidades! Estás aprobado.");
+            alert("¡Felicidades! Estás aprobado.");
         } else {
-            console.log("Lo siento, estás reprobado debido a tu calificación.");
+            alert("Lo siento, estás reprobado debido a tu calificación.");
         }
     } else {
-        console.log("Lo siento, estás reprobado debido a tus asistencias.");
+        alert("Lo siento, estás reprobado debido a tus asistencias.");
     }
 }
 
