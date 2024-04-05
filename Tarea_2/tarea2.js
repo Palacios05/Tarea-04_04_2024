@@ -13,4 +13,6 @@ var monto = parseFloat(prompt("Ingrese el monto: "))
 
 var descuento = calcularDescuento(monto)
 
-alert ("El descuento es de: " + descuento)
+var precio_final = monto - descuento
+
+alert ("El descuento es de: " + descuento + " \nEl precio final es " + precio_final)
