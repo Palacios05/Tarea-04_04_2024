@@ -15,4 +15,4 @@ var descuento = calcularDescuento(monto)
 
 var precio_final = monto - descuento
 
-alert ("El descuento es de: " + descuento + " \nEl precio final es " + precio_final)
+alert ("El descuento es de: " + descuento + " \nEl precio final es de: " + precio_final)
